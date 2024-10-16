@@ -36,7 +36,7 @@ public class EjerciciosConBucles {
     //Fibonacci es 0, el segundo es 1 y el resto se calcula sumando los dos anteriores, por lo que tendríamos que los términos
     //son 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144... El número n se debe introducir por teclado.
 
-    //ejercicio6();
+    ejercicio6();
 
     //7.- Escribe un programa que diga si un número introducido por teclado es o no primo. Un número primo es aquel que
     //sólo es divisible entre él mismo y la unidad.
@@ -62,13 +62,15 @@ public class EjerciciosConBucles {
     //11.- Realiza un programa que pida primero un número y a continuación un dígito. El programa nos debe dar la posición
     //(o posiciones) contando de izquierda a derecha que ocupa ese dígito en el número introducido.
 
-    ejercicio11();
+    //ejercicio11();
 
     //12.- Escribe un programa que calcule el factorial de un número entero leído por
     //teclado.
     //Ejemplo:
     //Por favor, introduzca un número entero: 6
     //6! = 720
+
+    //ejercicio12();
     }
 
     public void ejercicio1(){
@@ -161,15 +163,24 @@ public class EjerciciosConBucles {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un número para realizar la serie de Fibonacci esa cantidad de veces.");
         int num = sc.nextInt();
-        int fibonacci = 0;
-        int puntero = 1;
+        /* 
+        int puntero = 0;
+        int puntero2 = 1;
+        */
+        int ant = 0;
+        int sig = 1;
+        int fib = 0;
+        for(int i = num; i > 0; i--){
+        System.out.println(ant);
+        fib = ant + sig;
 
-        while (num > 0) {
-            System.out.println(fibonacci + " ," + puntero);
-            fibonacci += puntero;
-            puntero += fibonacci;
-
-            num--;
+        ant = sig;
+        sig = fib;
+        /*
+            System.out.println(puntero2 + " ," + puntero);
+            puntero2 += puntero;
+            puntero += puntero2;
+        */
         }
     }
 
@@ -281,23 +292,38 @@ public class EjerciciosConBucles {
         System.out.println("Ahora introduzca un dígito de ese número:");
         int digito = sc.nextInt();
 
-        int contador = 0;
+        int digitosNum = 0;
+        int posicionDigito = 0;
+        int posicionActual = 0;
+
         int digitoActual = 0;
         int numRecortado = num;
 
-        while (true) {
+        while (numRecortado > 0) {
+            numRecortado = numRecortado/10;
+            digitosNum++;
+        }
+        
+        numRecortado = num;
+        while (numRecortado > 0) {
             digitoActual = numRecortado%10;
             numRecortado = numRecortado/10;
-            contador++;
+            posicionActual++;
 
-            if (digito == digitoActual) {
-                System.out.println("La posición de ese dígito es la: " + contador);
-                break;
+            if (digitoActual == digito) {
+                System.out.println("La posición del digito es la: " + (digitosNum - posicionActual+1));
             }
-            if (numRecortado < 0) {
-                System.out.println("Error. El dígito no ha sido encontrado en ese número.");
-                break;
-            }
+        }
+    }
+
+    public void ejercicio12(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Por favor, introduzca un número entero:");
+        int num = sc.nextInt();
+
+        for(int i = num-1; i > 1; i--){
+            System.out.println(num+"*"+ i + "= " + num*i);
+            num*=i;
         }
     }
 }
