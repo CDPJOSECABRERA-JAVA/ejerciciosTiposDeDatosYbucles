@@ -36,7 +36,7 @@ public class EjerciciosConBucles {
     //Fibonacci es 0, el segundo es 1 y el resto se calcula sumando los dos anteriores, por lo que tendríamos que los términos
     //son 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144... El número n se debe introducir por teclado.
 
-    ejercicio6();
+    //ejercicio6();
 
     //7.- Escribe un programa que diga si un número introducido por teclado es o no primo. Un número primo es aquel que
     //sólo es divisible entre él mismo y la unidad.
@@ -62,7 +62,7 @@ public class EjerciciosConBucles {
     //11.- Realiza un programa que pida primero un número y a continuación un dígito. El programa nos debe dar la posición
     //(o posiciones) contando de izquierda a derecha que ocupa ese dígito en el número introducido.
 
-    //ejercicio11();
+    ejercicio11();
 
     //12.- Escribe un programa que calcule el factorial de un número entero leído por
     //teclado.
@@ -163,7 +163,7 @@ public class EjerciciosConBucles {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un número para realizar la serie de Fibonacci esa cantidad de veces.");
         int num = sc.nextInt();
-        /* 
+        /*
         int puntero = 0;
         int puntero2 = 1;
         */
@@ -293,7 +293,6 @@ public class EjerciciosConBucles {
         int digito = sc.nextInt();
 
         int digitosNum = 0;
-        int posicionDigito = 0;
         int posicionActual = 0;
 
         int digitoActual = 0;
