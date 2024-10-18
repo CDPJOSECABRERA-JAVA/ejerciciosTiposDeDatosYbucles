@@ -57,12 +57,12 @@ public class EjerciciosConBucles {
 
     //10.- Realiza un programa que pida un número por teclado y que luego muestre ese número al revés.
 
-    //ejercicio10();
+    ejercicio10();
 
     //11.- Realiza un programa que pida primero un número y a continuación un dígito. El programa nos debe dar la posición
     //(o posiciones) contando de izquierda a derecha que ocupa ese dígito en el número introducido.
 
-    ejercicio11();
+    //ejercicio11();
 
     //12.- Escribe un programa que calcule el factorial de un número entero leído por
     //teclado.
@@ -197,7 +197,6 @@ public class EjerciciosConBucles {
             break;
            }
         }
-
         if (esPrimo) System.out.println(num + " es un número primo.");
         else System.out.println(num + " NO es un número primo");
     }
@@ -245,6 +244,7 @@ public class EjerciciosConBucles {
             int num = sc.nextInt();
 
             if (num < 0) {
+                System.out.println("Se han introducido " + contadorNumeros + " números");
                 System.out.println("El mayor par introducido es: " + mayorPar + ".");
                 System.out.println("La suma de los impares es de: " + sumaImpares + " y su media es de: " + sumaImpares/2);
 
