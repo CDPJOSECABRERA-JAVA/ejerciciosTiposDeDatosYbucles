@@ -1,6 +1,8 @@
 package vista;
 
 import ejercicios.EjerciciosConBucles;
+import ejercicios.EjerciciosRepaso;
+import estudioEstructurasBasicas.*;
 import ejercicios.EjerciciosSentenciasCondicionales;
 import estudioEstructurasBasicas.*;
 
@@ -25,7 +27,23 @@ public class Main {
         System.out.println("Ejercicios sentencias condicionales");
         EjerciciosSentenciasCondicionales ejerciciosCondicionales = new EjerciciosSentenciasCondicionales();
         */
+        /*
         System.out.println("Ejercicios con bucles");
         EjerciciosConBucles ejerciciosConBucles = new EjerciciosConBucles();
+        */
+        /* 
+        System.out.println("Ejercicios repaso");
+        EjerciciosRepaso ejerciciosRepaso = new EjerciciosRepaso();
+        */
+        /* 
+        System.out.println("Estudio de printf");
+        EstudioFormat estudioFormat = new EstudioFormat();
+        */
+        /*
+        System.out.println("Estudio de Format y de Math");
+        EstudioFormatMath estudioFormatMath = new EstudioFormatMath();
+        */
+        System.out.println("Ejercicios de repaso");
+        EjerciciosRepaso ejerciciosRepaso = new EjerciciosRepaso();
         }
 }
