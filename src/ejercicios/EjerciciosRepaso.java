@@ -18,7 +18,7 @@ public class EjerciciosRepaso {
         Y, por último, la suma : 1 - 2 + 3 -   + 19 - 20.
         */
 
-        ejercicio2();
+        //ejercicio2();
 
         /*EJERCICIO 3: 
         Leer 10 datos, compuesto cada uno de ellos por un nombre de persona y su sueldo neto 
@@ -27,13 +27,16 @@ public class EjerciciosRepaso {
         secuencia de entrada.   
         */
 
-        ejercicio3();
+        //ejercicio3();
 
         /*EJERCICIO 4:
         Dados dos números enteros positivos, hallar el mínimo común múltiplo. Método a usar: Se van 
         hallando los sucesivos múltiplos del mayor de ellos hasta encontrar uno que sea divisible por el más 
         pequeño.
-         */
+        */
+
+        ejercicio4();
+
         /*EJERCICIO 5
         Diseña un programa que pase un en decimal a binario, utilizando el algoritmo de la división ente 2.
         */
@@ -143,6 +146,30 @@ public class EjerciciosRepaso {
         
         
 
+    }
+    
+    public void ejercicio4(){
+        Scanner sc = new Scanner(System.in);
+        int num1, num2, cambio, mcm = 0, i = 1;
+
+        System.out.println("Introduce el primer número:");
+        num1 = sc.nextInt();
+        System.out.println("Introduce el segundo número:");
+        num2 = sc.nextInt();
+    
+        if(num1 < num2){
+            cambio = num1;
+            num1 = num2;
+            num2 = cambio;
+        }
+        while (true) {
+            if ((num1*i)%num2 == 0) {               
+                mcm = num1*i;
+                break;
+            }
+            i++;
+        }
+        System.out.println(mcm);
     }
     
     public void ejercicio5(){
