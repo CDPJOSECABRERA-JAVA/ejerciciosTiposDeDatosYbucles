@@ -35,14 +35,14 @@ public class EjerciciosRepaso {
         pequeño.
         */
 
-        ejercicio4();
+        //ejercicio4();
 
         /*EJERCICIO 5
         Diseña un programa que pase un en decimal a binario, utilizando el algoritmo de la división ente 2.
         */
 
-        //ejercicio5();
-    
+        ejercicio5();
+
     }
 
     public void ejercicio1(){
@@ -150,7 +150,7 @@ public class EjerciciosRepaso {
     
     public void ejercicio4(){
         Scanner sc = new Scanner(System.in);
-        int num1, num2, cambio, mcm = 0, i = 1;
+        int num1, num2, mcm, i = 1;
 
         System.out.println("Introduce el primer número:");
         num1 = sc.nextInt();
@@ -158,7 +158,7 @@ public class EjerciciosRepaso {
         num2 = sc.nextInt();
     
         if(num1 < num2){
-            cambio = num1;
+            int cambio = num1;
             num1 = num2;
             num2 = cambio;
         }
@@ -173,26 +173,18 @@ public class EjerciciosRepaso {
     }
     
     public void ejercicio5(){
-        int num =124;
+        int num =12;
         int numDividido = num;
-        String numBinarioStr = "";
+        String resto = "", coc = "", binario="";
 
 
         while (numDividido > 2) {
-            numBinarioStr += numDividido % 2;
-            if (numDividido/2 == 1 || numDividido/2 == 0) {
-                numBinarioStr += numDividido/2;
-            }
+            resto += numDividido % 2;
+            if (numDividido/2 == 1 || numDividido/2 == 0) coc += numDividido/2;                          
             numDividido /= 2;
         }
-        
-        StringBuilder numBinarioBuilder = new StringBuilder(numBinarioStr);
-
-        numBinarioBuilder.reverse();
-        numBinarioStr = numBinarioBuilder.toString();
-        int numBinario = Integer.parseInt(numBinarioStr);
-
-        System.out.println(numBinario);
+        binario = resto + coc;
+        System.out.println(binario);
 
     }
 

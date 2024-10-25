@@ -43,7 +43,11 @@ public class Main {
         System.out.println("Estudio de Format y de Math");
         EstudioFormatMath estudioFormatMath = new EstudioFormatMath();
         */
+        /*
         System.out.println("Ejercicios de repaso");
         EjerciciosRepaso ejerciciosRepaso = new EjerciciosRepaso();
+        */
+        System.out.println("Estudio de métodos");
+        EstudioMetodos estudioMetodos = new EstudioMetodos();
         }
 }
