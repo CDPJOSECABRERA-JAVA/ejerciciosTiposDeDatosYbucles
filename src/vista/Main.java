@@ -2,6 +2,7 @@ package vista;
 
 import ejercicios.EjerciciosConBucles;
 import ejercicios.EjerciciosRepaso;
+import ejercicios.EjerciciosRepasoDos;
 import estudioEstructurasBasicas.*;
 import ejercicios.EjerciciosSentenciasCondicionales;
 import estudioEstructurasBasicas.*;
@@ -47,7 +48,11 @@ public class Main {
         System.out.println("Ejercicios de repaso");
         EjerciciosRepaso ejerciciosRepaso = new EjerciciosRepaso();
         */
+        /*
         System.out.println("Estudio de métodos");
         EstudioMetodos estudioMetodos = new EstudioMetodos();
+         */
+        System.out.println("Ejercicios de repaso 2");
+        EjerciciosRepasoDos ejerciciosRepasoDos = new EjerciciosRepasoDos();
         }
 }
