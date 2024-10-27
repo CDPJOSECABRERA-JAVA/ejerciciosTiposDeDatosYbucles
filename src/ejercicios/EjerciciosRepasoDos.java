@@ -20,13 +20,13 @@ public class EjerciciosRepasoDos {
             Diseña un programa que me diga los números elegantes que hay entre dos dados.
         */
 
-        ejercicio3();
+        //ejercicio3();
 
         /* EJERCICIO 4
             Diseña un programa que me diga los números primos sexis que hay entre dos dados.
         */
 
-        //ejercicio4();
+        ejercicio4();
 
     }
     
@@ -112,18 +112,67 @@ public class EjerciciosRepasoDos {
         }
 
         for(int i = numMenor; i <= numMayor; i++){
-            if (comprobarNumeroElegante(i)) System.out.println(i);
+            if (comprobarNumeroElegante(i)) System.out.print( " - " + i);
         }
     }
 
     public void ejercicio4(){
-        System.out.println("Ejercicio4");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el valor menor para obtener los primos sexys que hay entre dos números:");
+        int numMenor = sc.nextInt();
+        System.out.println("Ahora el mayor:");
+        int numMayor = sc.nextInt();
+
+        if (numMayor < numMenor) {
+            int c = numMenor;
+            numMenor = numMayor;
+            numMayor = c;
+        }
+
+        int primoMenosSeis = 0;
+
+        for(int i = numMenor; i <= numMayor; i++){
+            
+            if(esPrimo(i)){
+
+                if (esPrimo(i-6) && i-6 > 1) primoMenosSeis = i-6;
+
+                if (i == primoMenosSeis + 6) {
+                    System.out.println(primoMenosSeis + " y " + i);
+                }
+            }
+            
+        }
     }
     
+    
+    
     // -------------------------------------------------------------------------------------------------
-    boolean comprobarNumeroElegante(int i){
-    return true;
+    
+    boolean comprobarNumeroElegante(int num){
+        int numRecortado = num, totalSuma = 0;
+
+        while (true) {
+            if (numRecortado <= 0) {
+
+                if (totalSuma == 4) return false;
+                if (totalSuma == 1) return true;
+
+                numRecortado = totalSuma;
+                totalSuma = 0;
+            }
+
+            totalSuma += (Math.pow((numRecortado%10), 2));
+            numRecortado/=10;
+        }
     }
 
+
+    boolean esPrimo(int num){
+        for (int i = 2; i < num - 1; i++) {
+            if (num%i == 0) return false; 
+        }
+        return true;
+    }
 }
 
