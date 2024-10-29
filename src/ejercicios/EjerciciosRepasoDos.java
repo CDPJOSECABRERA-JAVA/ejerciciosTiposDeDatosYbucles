@@ -57,9 +57,11 @@ public class EjerciciosRepasoDos {
 
             if (num == numRandom) {
                 System.out.printf("Felicidades, has acertado en %d intentos!", i);
+                break;
             }else{
                 if (num < numRandom) System.out.println("El número aleatorio es mayor al introducido.");
                 else System.out.println("El número aleatorio es menor al introducido.");
+                
                 System.out.println("Te quedan " + (intentos-i) + " intentos.");
             }
         }
@@ -86,7 +88,7 @@ public class EjerciciosRepasoDos {
         solucion1 = (-b + raiz)/(2*a);
         solucion2 = (-b - raiz)/(2*a);
 
-        String solucion1str = "" + solucion1, solucion2str = "" + solucion2;
+        String solucion1str = "" + solucion1;
 
         if(solucion1str.equals("NaN") || solucion1str.equals("Infinity")){
             System.out.println("La ecuación no tiene solucion en los números reales.");
@@ -133,19 +135,12 @@ public class EjerciciosRepasoDos {
 
         for(int i = numMenor; i <= numMayor; i++){
             
-            if(esPrimo(i)){
-
-                if (esPrimo(i-6) && i-6 > 1) primoMenosSeis = i-6;
-
-                if (i == primoMenosSeis + 6) {
-                    System.out.println(primoMenosSeis + " y " + i);
-                }
+            if(esPrimo(i) && esPrimo(i-6) && i-6 > 1){
+                    System.out.println(i-6 + " y " + i);
             }
             
         }
     }
-    
-    
     
     // -------------------------------------------------------------------------------------------------
     
